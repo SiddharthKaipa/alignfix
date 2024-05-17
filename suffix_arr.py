@@ -3,8 +3,9 @@ import numpy as np
 class SA:
     def __init__(self, db):
         self.db = db
-        self.suffix_arr = []
-
+        suffixes_array = []
+        
+        
     def sort(self):
         self.suffix_arr = sorted([])
     def search(self, word):
@@ -17,7 +18,17 @@ class SA:
 
         return self.suffix_arr[index]
 
-    def
+    def suffix_array(text):
+        suffixes = []
+        for i in range(len(text)):
+            suffixes.append(text[i:])
+            
+        ret = []
+        suffixes_sorted = sorted(suffixes)
+        for suffix in suffixes_sorted:
+            ret.append(text.index(suffix))
+        return ret
+   
 
 
 
